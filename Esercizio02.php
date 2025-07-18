@@ -26,9 +26,20 @@ $persons = [
 //Minore di 18: "$nome_persona non può votare"
 
 
-function controlloEta ($valore){
-    if ($valore >= 18){
-        echo ($valore).'può votare';
+function controlloEta($nome, $eta) {
+    if ($eta >= 18) {
+        return "$nome può votare";
+    } else {
+        return "$nome non può votare";
     }
 }
 
+
+function verificaPersone($persone) {
+    foreach ($persone as $persona) {
+        echo controlloEta($persona['name'], $persona['age']) . "\n";
+    }
+}
+
+
+verificaPersone($persons);
