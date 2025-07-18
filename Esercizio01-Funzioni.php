@@ -48,7 +48,7 @@ stampaNumeri(30);
         } else if ($i % 3 === 0) {
             echo "Il numero ". $i ." è multiplo di 3 ". "\n";
         } else {
-            echo $i;
+            echo $i. "\n";
         }
     }
 }
